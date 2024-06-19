@@ -21,7 +21,7 @@ function entrar() {
     const naoWidth = nao.clientWidth;
     const naoHeight = nao.clientHeight;
 
-    const randomX = Math.random() * (areaWidth - naoWidth);
+    const randomX = Math.random() * areaWidth * 2;
     const randomY = Math.random() * (areaHeight - naoHeight);
 
     nao.style.transform = `translate(${randomX}px, ${randomY}px)`;
@@ -46,9 +46,6 @@ function clicar() {
         console.error("Erro ao tentar tocar o áudio:", error);
     });
 
-    setTimeout(function() {
-        resp.style.opacity = 0;
-    }, 3000);
 }
 
 function updateTimeLeft(timeLeft) {
